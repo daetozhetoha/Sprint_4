@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
@@ -25,10 +26,9 @@ public class OrderScooterTest {
     private final String phoneNumber;
     private final String deliveryDate;
     private final String comment;
-    private final boolean isVisible;
 
     public OrderScooterTest (String name, String lastName, String address, String metroStation, String phoneNumber,
-                             String deliveryDate, String comment, boolean isVisible) {
+                             String deliveryDate, String comment) {
         this.name = name;
         this.lastName = lastName;
         this.address = address;
@@ -36,7 +36,6 @@ public class OrderScooterTest {
         this.phoneNumber = phoneNumber;
         this.deliveryDate = deliveryDate;
         this.comment = comment;
-        this.isVisible = isVisible;
     }
 
     @Before
@@ -48,9 +47,9 @@ public class OrderScooterTest {
     @Parameterized.Parameters
     public static Object[][] getInputs() {
         return new Object[][]{
-                {"Вячеслав", "Голангов", "Бульвар Автоматизаторов", "Лубянка", PHONENUMBER, "2025-03-01", "Привезите, пожалуйста", true},
-                {"Никита", "Сишарпин", "Тестовый проспект", "Фрунзенская", PHONENUMBER, "2025-03-02", "Позвонить за 1.5 часа до выезда", true},
-                {"Ольга", "Джава", "Площадь покрытия тестированием", "Аэропорт", PHONENUMBER, "2025-03-03", "", true}
+                {"Вячеслав", "Голангов", "Бульвар Автоматизаторов", "Лубянка", PHONENUMBER, "2025-03-01", "Привезите, пожалуйста"},
+                {"Никита", "Сишарпин", "Тестовый проспект", "Фрунзенская", PHONENUMBER, "2025-03-02", "Позвонить за 1.5 часа до выезда"},
+                {"Ольга", "Джава", "Площадь покрытия тестированием", "Аэропорт", PHONENUMBER, "2025-03-03", ""}
             };
         }
 
