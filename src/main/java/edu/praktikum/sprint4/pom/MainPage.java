@@ -177,4 +177,16 @@ public class MainPage {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         element.click();
     }
+    public MainPage clickAccordionByXPath(String questionXPath) {
+        WebElement element = driver.findElement(By.xpath(questionXPath));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
+        return this;
+    }
+    public boolean checkAnswerIsVisibleByXPath(String answerXPath) {
+        return driver.findElement(By.xpath(answerXPath)).isDisplayed();
+    }
+    public String checkAnswerByXPath(String answerXPath) {
+        return  driver.findElement(By.xpath(answerXPath)).getText();
+    }
 }
