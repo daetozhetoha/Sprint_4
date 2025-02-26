@@ -59,10 +59,10 @@ public class OrderScooterTest {
         orderPage.open();
         orderPage.fillForWhomScooterForm(name, lastName, address, metroStation, phoneNumber);
         orderPage.fillAboutRentForm(deliveryDate, comment);
-        orderPage.openRentalPeriodList();
-        orderPage.chooseFiveDaysRent()
-                 .chooseGreyColor();
-        orderPage.clickOrderButtonUnderInputs()
+        orderPage.openRentalPeriodList()
+                 .chooseFiveDaysRent()
+                 .chooseGreyColor()
+                 .clickOrderButtonUnderInputs()
                  .clickApproveOrder();
         assertTrue("Информации об успешности заказа нет", orderPage.checkOrderedTopicExists());
     }
@@ -73,10 +73,10 @@ public class OrderScooterTest {
         orderPage.open();
         orderPage.fillForWhomScooterForm(name, lastName, address, metroStation, phoneNumber);
         orderPage.fillAboutRentForm(deliveryDate, comment);
-        orderPage.openRentalPeriodList();
-        orderPage.chooseOneDayRent()
-                 .chooseBlackColor();
-        orderPage.clickOrderButtonUnderInputs()
+        orderPage.openRentalPeriodList()
+                 .chooseOneDayRent()
+                 .chooseBlackColor()
+                 .clickOrderButtonUnderInputs()
                  .clickApproveOrder();
         assertTrue("Информации об успешности заказа нет", orderPage.checkOrderedTopicExists());
     }

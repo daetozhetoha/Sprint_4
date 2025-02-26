@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -25,7 +26,7 @@ public class FaqTest {
         MainPage mainPage  = new MainPage(driver);
 
         mainPage.open()
-        .clickCostAndPaymentQuestionAccordion();
+                .clickCostAndPaymentQuestionAccordion();
         assertTrue("Элемент не виден на странице", mainPage.checkAnswerOnCostAndPaymentQuestionIsVisible());
     }
 
@@ -86,7 +87,6 @@ public class FaqTest {
     @Test
     public void checkAnswerOnOrderScooterTodayIsVisible() {
         MainPage mainPage  = new MainPage(driver);
-
         mainPage.open()
                 .clickOrderScooterTodayQuestionAccordion();
         assertTrue("Элемент не виден на странице", mainPage.checkAnswerOnOrderScooterTodayIsVisible());
@@ -95,7 +95,6 @@ public class FaqTest {
     @Test
     public void checkAnswerOnOrderScooterToday() {
         MainPage mainpage = new MainPage(driver);
-
         mainpage.open()
                 .clickOrderScooterTodayQuestionAccordion();
         String expectedAnswer = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
@@ -106,7 +105,6 @@ public class FaqTest {
     @Test
     public void checkAnswerOnIncreaseOrDecreaseOrderTimeIsVisible() {
         MainPage mainPage  = new MainPage(driver);
-
         mainPage.open()
                 .clickIncreaseOrDecreaseOrderTimeAccordion();
         assertTrue("Элемент не виден на странице", mainPage.checkAnswerOnIncreaseOrDecreaseOrderTimeIsVisible());
@@ -177,7 +175,6 @@ public class FaqTest {
     @Test
     public void checkAnswerOnBringingScooterBeyondMRR() {
         MainPage mainpage = new MainPage(driver);
-
         mainpage.open()
                 .clickBringingScooterBeyondMRRQuestionAccordion();
         String expectedAnswer = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
